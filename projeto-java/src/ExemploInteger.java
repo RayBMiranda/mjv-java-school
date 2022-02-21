@@ -1,6 +1,5 @@
 public class ExemploInteger {
    public static void main(String[] args) {
-
        Integer i = 1;
        Integer i2 = Integer.valueOf("1");
        Integer i3 = new Integer(1);
@@ -34,7 +33,5 @@ public class ExemploInteger {
 
        //Recebe uma String e retorna um Integer
        //static Integer 	valueOf(String s)
-
-
    } 
 }
