@@ -144,8 +144,6 @@ public class ExemploOperadores {
         System.out.println("O numero 1 agora é " + n1);
         System.out.println("O numero 2 agora é " + n2);
 
-        if(false) System.out.println("a"); System.out.println("B");
-
         // Vamos mudar a linha 5 do código acima para: if(numero1== 2 && numero2 ++ == 2 )
 
         
