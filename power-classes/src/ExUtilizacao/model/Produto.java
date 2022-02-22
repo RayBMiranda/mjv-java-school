@@ -60,7 +60,7 @@ public class Produto {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Id = ")
-        .append(id)
+        .append(id.toString())
         .append("\nCódigo Barras = ")
         .append(codigoBarras)
         .append("\nDescrição = ")

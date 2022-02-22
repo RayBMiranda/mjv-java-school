@@ -21,5 +21,10 @@ public class ExemploUtilizacao {
         produto.setAtivo(Boolean.parseBoolean(arquivo[5]));
 
         System.out.println(produto.toString());
+
+        Boolean precoCustoIgualVenda = produto.getPrecoCusto().equals(produto.getPrecoVenda());
+
+        System.out.println(
+            "Preço de Custo igual ao Preço de Venda: " + (precoCustoIgualVenda));
     }
 }
