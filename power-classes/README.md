@@ -20,13 +20,13 @@ Além disso, esta classe fornece vários métodos para converter um int em uma S
 
 A classe double é uma classe wrapper para o tipo primitivo double que contém vários métodos , como convertê-lo em uma representação de string e vice-versa. Um objeto da classe Double pode conter um único valor double. Existem principalmente dois construtores para inicializar um objeto Double.
 
+Link para o Slide: https://github.com/RayBMiranda/mjv-java-school/blob/main/power-classes/Power%20Classes.pptx
+
 Exemplo de instanciação de alugumas classes Wrappers: https://github.com/RayBMiranda/mjv-java-school/blob/main/power-classes/src/ExemploClassesWrappers.java
 
 Exemplo do java.lang.Integer: https://github.com/RayBMiranda/mjv-java-school/blob/main/power-classes/src/ExemploInteger.java
 
 Exemplo do java.lang.Double: https://github.com/RayBMiranda/mjv-java-school/blob/main/power-classes/src/ExemploDouble.java
-
-Link para o Slide: https://github.com/RayBMiranda/mjv-java-school/blob/main/power-classes/Power%20Classes.pptx
 
 Link para o exemplo de utilização: https://github.com/RayBMiranda/mjv-java-school/tree/main/power-classes/src/ExUtilizacao
 
