@@ -1,18 +1,27 @@
-## Getting Started
+## Power Classes
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Os Wrappers são classes especiais que possuem métodos capazes de fazer conversões em variáveis primárias e também de encapsular tipos primitivos para serem trabalhados como objetos.
+Existe uma classe Wrapper para cada tipo primitivo identificado pelo mesmo nome do tipo que possui e tendo a primeira letra maiúscula. Essa regra de declaração é aplicada a todos os tipos, exceto aos que são char classificados como Character.
 
-## Folder Structure
+De acordo com a hierarquia cada tipo wrapper numérico em Java são subclasses da superclasse abstrata Number (java.lang.Number) que consegue acessar todos os métodos values que são: doubleValue(), floatValue(), longValue(), intValue(), shortValue() e byteValue().
 
-The workspace contains two folders by default, where:
+## Construtores
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Nos construtores Wrappers apenas a classe Character não fornece dois construtores, sendo que as demais aceitam dois construtores.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Nos argumentos wrappers Boolean podem ser usados valores como: true, false e String. Um ponto de observação é que os valores declarados dentro do construtor não diferenciam letras maiúsculas de minúsculas.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## java.lang.Integer
 
-## Dependency Management
+A classe Integer envolve um valor do tipo primitivo int em um objeto. Um objeto do tipo Integer contém um único campo cujo tipo é int.
+Além disso, esta classe fornece vários métodos para converter um int em uma String e uma String em um int, bem como outras constantes e métodos úteis ao lidar com um int.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## java.lang.Double
+
+A classe double é uma classe wrapper para o tipo primitivo double que contém vários métodos , como convertê-lo em uma representação de string e vice-versa. Um objeto da classe Double pode conter um único valor double. Existem principalmente dois construtores para inicializar um objeto Double.
+
+Fontes:
+http://www.linhadecodigo.com.br/artigo/3667/classes-wrappers-em-java.aspx
+https://acervolima.com/classe-java-lang-double-em-java/
+https://imasters.com.br/back-end/wrappers
+https://docs.oracle.com/javase/9/docs/api/java/lang/Double.html
