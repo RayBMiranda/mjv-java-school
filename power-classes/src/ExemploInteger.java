@@ -8,17 +8,11 @@ public class ExemploInteger {
 
     //Compara os valores dos objetos e retorna true se iguais
     //boolean    equals(Object obj)
-    //Sobrescreve o método da Classe Object
 
     if(i.equals(i2))
         System.out.println("i igual a i2");
     else
         System.out.println("i diferente de i2");
-
-    System.out.println(i2.equals(i3) ? "i2 igual a i3": "i2 diferente de i3");
-    System.out.println(i3.equals(i4) ? "i3 igual a i4": "i3 diferente de i4");
-
-
     
     //Recebe uma String e converte em int
     //static int     parseInt(String s)
@@ -30,7 +24,6 @@ public class ExemploInteger {
 
     //Recebe um int e retorna uma String
     //static String  toString(int i)
-    //Sobrescreve o métodos da Classe Object
 
     String numero = Integer.toString(i6);
     numero = "::" + numero + "::";

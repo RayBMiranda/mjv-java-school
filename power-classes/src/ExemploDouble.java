@@ -20,10 +20,5 @@ public class ExemploDouble {
         System.out.println("parseDouble(\"45\") = " + bb);
 
         System.out.println("intValue = " + z.intValue());
-
-        //Métodos Sobrescritos
-        //valueOf();
-        //Construtor
-
     }
 }
