@@ -4,6 +4,7 @@ public class Cadastro {
     private int numero;
     private boolean ativo;
     private Pessoa pessoa;
+    private NotificacaoTipo notificacaoTipo;
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
@@ -12,7 +13,7 @@ public class Cadastro {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-    
+
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
     }
@@ -27,5 +28,13 @@ public class Cadastro {
 
     public boolean isAtivo() {
         return ativo;
+    }
+
+    public NotificacaoTipo getNotificacaoTipo() {
+        return notificacaoTipo;
+    }
+
+    public void setNotificacaoTipo(NotificacaoTipo notificacaoTipo) {
+        this.notificacaoTipo = notificacaoTipo;
     }
 }
