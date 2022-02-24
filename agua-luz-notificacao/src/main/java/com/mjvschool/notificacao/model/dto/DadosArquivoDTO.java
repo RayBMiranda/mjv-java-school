@@ -12,6 +12,7 @@ public class DadosArquivoDTO {
     private String complemento;
     private String bairro;
     private String cidade;
+    private String estado;
     private String cep;
     private String protocolo;
     private Date data;
@@ -112,5 +113,13 @@ public class DadosArquivoDTO {
 
     public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getEstado() {
+        return estado;
     }
 }

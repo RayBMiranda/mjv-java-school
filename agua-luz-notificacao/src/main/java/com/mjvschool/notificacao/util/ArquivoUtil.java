@@ -8,9 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mjvschool.notificacao.model.cadastro.Cadastro;
 import com.mjvschool.notificacao.model.cadastro.Servico;
-import com.mjvschool.notificacao.model.contrato.Contrato;
 import com.mjvschool.notificacao.model.dto.DadosArquivoDTO;
 
 public class ArquivoUtil {
@@ -80,6 +78,8 @@ public class ArquivoUtil {
 
             dadosArquivoDTO.setCpf(cpf);
             dadosArquivoDTO.setNome(nome);
+            dadosArquivoDTO.setEstado(estado);
+            dadosArquivoDTO.setLogradouro(logradouro);
             dadosArquivoDTO.setCidade(cidade);
             dadosArquivoDTO.setBairro(bairro);
             dadosArquivoDTO.setCep(cep);

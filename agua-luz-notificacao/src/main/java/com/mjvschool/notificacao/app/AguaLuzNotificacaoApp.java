@@ -3,11 +3,11 @@ package com.mjvschool.notificacao.app;
 import java.util.List;
 
 import com.mjvschool.notificacao.model.dto.DadosArquivoDTO;
-import com.mjvschool.notificacao.repository.ContratoRepository;
+import com.mjvschool.notificacao.repository.DadosArquivoRepository;
 import com.mjvschool.notificacao.util.ArquivoUtil;
 
 public class AguaLuzNotificacaoApp {
-	private static ContratoRepository contratoRepositorio = new ContratoRepository();
+	private static DadosArquivoRepository dadosRepositorio = new DadosArquivoRepository();
 	public static void main(String[] args) {
 		faseLeituraArquivo();
         faseEnvioNotificacao();
@@ -17,12 +17,13 @@ public class AguaLuzNotificacaoApp {
 
 	private static void faseLeituraArquivo() {
 		List<DadosArquivoDTO> dados = ArquivoUtil.lerArquivo();
-
-        //contratoRepositorio.gravar(contrato2);
+		for (DadosArquivoDTO dadosArquivoDTO : dados) {
+			dadosRepositorio.gravar(dadosArquivoDTO);
+		}
 	}
 
     public static void faseEnvioNotificacao(){
-
+		
     }
 
 	private static void faseGeracaoArquivo() {
