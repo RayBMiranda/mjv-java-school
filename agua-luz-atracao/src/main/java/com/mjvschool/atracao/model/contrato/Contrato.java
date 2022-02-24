@@ -3,7 +3,6 @@ package com.mjvschool.atracao.model.contrato;
 import java.util.Date;
 
 import com.mjvschool.atracao.model.cadastro.Cadastro;
-import com.mjvschool.atracao.model.cadastro.Pessoa;
 import com.mjvschool.atracao.model.cadastro.Servico;
 
 //java beans
