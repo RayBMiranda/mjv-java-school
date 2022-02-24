@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 
 public class DataUtil {
     public static String preparaData(Date data){
-        SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMDD");
+        SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd");
         return fmt.format(data);
     }
 
