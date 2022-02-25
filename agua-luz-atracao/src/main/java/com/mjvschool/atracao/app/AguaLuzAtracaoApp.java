@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.mjvschool.atracao.model.cadastro.Cadastro;
 import com.mjvschool.atracao.model.cadastro.Endereco;
+import com.mjvschool.atracao.model.cadastro.NotificacaoTipo;
 import com.mjvschool.atracao.model.cadastro.Pais;
 import com.mjvschool.atracao.model.cadastro.Pessoa;
 import com.mjvschool.atracao.model.cadastro.Servico;
@@ -32,6 +33,7 @@ public class AguaLuzAtracaoApp {
         Cadastro cadastro = new Cadastro();
         cadastro.setAtivo(true);
         cadastro.setNumero(27);
+        cadastro.setNotificacaoTipo(NotificacaoTipo.SMS);
 
         Pessoa pessoa = new Pessoa();
         pessoa.setCpf("56737284094");
@@ -50,6 +52,7 @@ public class AguaLuzAtracaoApp {
         endereco.setComplemento("Próximo ao quebra molas");
         pessoa.setEndereco(endereco);
         cadastro.setPessoa(pessoa);
+        
         contrato.setCadastro(cadastro);
         contrato.setDataHora(new Date());
 
@@ -61,6 +64,7 @@ public class AguaLuzAtracaoApp {
         Cadastro cadastro2 = new Cadastro();
         cadastro2.setAtivo(true);
         cadastro2.setNumero(27);
+        cadastro2.setNotificacaoTipo(NotificacaoTipo.WHATS);
 
         Pessoa pessoa2 = new Pessoa();
         pessoa2.setCpf("8787987554");

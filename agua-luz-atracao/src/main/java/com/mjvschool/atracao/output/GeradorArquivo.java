@@ -84,6 +84,7 @@ public class GeradorArquivo {
                                             .concat(DataUtil.preparaHora(ct.getDataHora()))
                                             .concat(String.valueOf(ct.getServico().getSigla()))
                                             .concat(TextoUtil.preencherSomenteNumeros(ct.getServico().getValor().toString(), 8, true).replace(" ", "0"))
+                                            .concat(ct.getCadastro().getNotificacaoTipo().getSigla())
                     ));
             conteudo.append("\n");
         }
