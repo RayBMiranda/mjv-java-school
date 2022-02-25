@@ -1,15 +1,10 @@
 package com.mjvschool.notificacao.service;
 
-import java.util.Locale;
-
 import com.mjvschool.notificacao.model.dto.DadosArquivoDTO;
 import com.mjvschool.notificacao.util.DataUtil;
-import com.mjvschool.notificacao.util.NumeroUtil;
 
 public class ContratoService {
     public String gerarConteudoContrato(DadosArquivoDTO dadosArquivoDTO){
-        Locale loc = Locale.US;
-
         StringBuilder txt = new StringBuilder();
         txt.append("Senhor(a) ");
         txt.append(dadosArquivoDTO.getNome());
