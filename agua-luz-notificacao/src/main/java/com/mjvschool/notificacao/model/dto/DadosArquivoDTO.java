@@ -2,6 +2,7 @@ package com.mjvschool.notificacao.model.dto;
 
 import java.util.Date;
 
+import com.mjvschool.notificacao.model.cadastro.NotificacaoTipo;
 import com.mjvschool.notificacao.model.cadastro.Servico;
 
 public class DadosArquivoDTO {
@@ -18,6 +19,7 @@ public class DadosArquivoDTO {
     private Date data;
     private Servico tipoInstalacao;
     private Double valor;
+    private NotificacaoTipo notificacaoTipo;
 
     public String getCpf() {
         return cpf;
@@ -121,5 +123,13 @@ public class DadosArquivoDTO {
 
     public String getEstado() {
         return estado;
+    }
+
+    public NotificacaoTipo getNotificacaoTipo() {
+        return notificacaoTipo;
+    }
+
+    public void setNotificacaoTipo(NotificacaoTipo notificacaoTipo) {
+        this.notificacaoTipo = notificacaoTipo;
     }
 }

@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 public class DataUtil {
     
     public static Date preparaData(String dataHora){
-        SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMDD HHMM");
+        SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd HHMM");
         try {
             return fmt.parse(dataHora);
         } catch (ParseException e) {
@@ -17,7 +17,7 @@ public class DataUtil {
     }
 
     public static String preparaData(Date data){
-        SimpleDateFormat fmt = new SimpleDateFormat("DD/MM/YYYY");
+        SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
         return fmt.format(data);
     }
 

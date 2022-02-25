@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjvschool.notificacao.model.cadastro.NotificacaoTipo;
 import com.mjvschool.notificacao.model.cadastro.Servico;
 import com.mjvschool.notificacao.model.dto.DadosArquivoDTO;
 
@@ -73,6 +74,7 @@ public class ArquivoUtil {
             posAtual += 1;
             String valor = linha.substring(posAtual, posAtual+8).trim();
             posAtual += 8;
+            String notificacaoTipoString = linha.substring(posAtual, posAtual+1);
 
             DadosArquivoDTO dadosArquivoDTO = new DadosArquivoDTO();
 
@@ -89,6 +91,7 @@ public class ArquivoUtil {
             dadosArquivoDTO.setProtocolo(protocolo);
             dadosArquivoDTO.setTipoInstalacao(tipoInstalacao == "L" ? Servico.LUZ : Servico.AGUA);
             dadosArquivoDTO.setValor(NumeroUtil.preparaDouble(valor));
+            dadosArquivoDTO.setNotificacaoTipo(notificacaoTipoString.equals("S") ? NotificacaoTipo.SMS : NotificacaoTipo.WHATS);
             
             dados.add(dadosArquivoDTO);
         }
