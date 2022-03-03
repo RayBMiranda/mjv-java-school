@@ -17,8 +17,6 @@ public class GeradorArquivo {
         String pastaAtual = System.getProperty("user.dir");
         String pasta = pastaAtual.substring(0,pastaAtual.lastIndexOf(fileSeparator));
 
-        System.out.println("Diretório Destino: " + pasta);
-
         StringBuilder dirPath = new StringBuilder();
 		if(!windows)
 			dirPath.append(pasta.concat(fileSeparator).concat("agua-luz-output").concat(fileSeparator));
