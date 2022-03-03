@@ -20,6 +20,8 @@ public class DadosArquivoDTO {
     private Servico tipoInstalacao;
     private Double valor;
     private NotificacaoTipo notificacaoTipo;
+    private String pais;
+    private String linguagem;
 
     public String getCpf() {
         return cpf;
@@ -131,5 +133,20 @@ public class DadosArquivoDTO {
 
     public void setNotificacaoTipo(NotificacaoTipo notificacaoTipo) {
         this.notificacaoTipo = notificacaoTipo;
+    }
+
+    public String getLinguagem() {
+        return linguagem;
+    }
+
+    public void setLinguagem(String linguagem) {
+        this.linguagem = linguagem;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 }

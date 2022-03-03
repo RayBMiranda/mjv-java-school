@@ -22,8 +22,6 @@ public class ArquivoUtil {
         String pastaAtual = System.getProperty("user.dir");
         String pasta = pastaAtual.substring(0,pastaAtual.lastIndexOf(fileSeparator));
 
-        System.out.println("Diretório Destino: " + pasta);
-
         StringBuilder dirPath = new StringBuilder();
 		if(!windows)
 			dirPath.append(pasta.concat(fileSeparator).concat("agua-luz-output").concat(fileSeparator));
@@ -44,7 +42,6 @@ public class ArquivoUtil {
         }        
 
         for (String linha : linhas) {
-            System.out.println(linha);
             int posAtual = 0;
             String cpf = linha.substring(posAtual, posAtual+11).trim();
             posAtual = 11;
@@ -75,6 +72,11 @@ public class ArquivoUtil {
             String valor = linha.substring(posAtual, posAtual+8).trim();
             posAtual += 8;
             String notificacaoTipoString = linha.substring(posAtual, posAtual+1);
+            posAtual += 1;
+            String linguagem = linha.substring(posAtual, posAtual+2);
+            posAtual += 2;
+            String pais = linha.substring(posAtual, posAtual+2);
+            posAtual += 2;
 
             DadosArquivoDTO dadosArquivoDTO = new DadosArquivoDTO();
 
@@ -89,10 +91,12 @@ public class ArquivoUtil {
             dadosArquivoDTO.setComplemento(complemento);
             dadosArquivoDTO.setData(DataUtil.preparaData(data + " " + hora));
             dadosArquivoDTO.setProtocolo(protocolo);
-            dadosArquivoDTO.setTipoInstalacao(tipoInstalacao == "L" ? Servico.LUZ : Servico.AGUA);
+            dadosArquivoDTO.setTipoInstalacao(tipoInstalacao.equals("L") ? Servico.LUZ : Servico.AGUA);
             dadosArquivoDTO.setValor(NumeroUtil.preparaDouble(valor));
             dadosArquivoDTO.setNotificacaoTipo(notificacaoTipoString.equals("S") ? NotificacaoTipo.SMS : NotificacaoTipo.WHATS);
-            
+            dadosArquivoDTO.setLinguagem(linguagem);
+            dadosArquivoDTO.setPais(pais);
+
             dados.add(dadosArquivoDTO);
         }
 

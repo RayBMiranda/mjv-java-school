@@ -1,6 +1,8 @@
 package com.mjvschool.notificacao.util;
 
 import java.util.Date;
+import java.util.Locale;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -25,4 +27,11 @@ public class DataUtil {
         SimpleDateFormat fmt = new SimpleDateFormat("HH:MM");
         return fmt.format(data);
     }
+
+    public static String formataData(Date data, Locale local){
+        DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, local);
+        String formattedDate = df.format(data);
+        return formattedDate;
+    }
+
 }

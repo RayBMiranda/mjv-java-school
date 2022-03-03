@@ -1,5 +1,11 @@
 package com.mjvschool.notificacao.util;
 
+import java.lang.System.Logger.Level;
+import java.text.ParseException;
+import java.util.logging.Logger;
+
+import javax.swing.text.MaskFormatter;
+
 public class TextoUtil {
 	public static String preencher(String textoOriginal, int tamanhoMaximo, boolean esquerda){
         String formato = "%" + (esquerda == true ? "" : "-") + String.valueOf(tamanhoMaximo).concat("s");
@@ -37,5 +43,27 @@ public class TextoUtil {
         String novaString = somenteNumeros(textoOriginal);
         novaString = preencher(novaString, tamanhoMaximo, esquerda);
         return novaString;
+    }
+
+    public static String formatarCPF(String cnpj) {
+        try {
+            MaskFormatter mask = new MaskFormatter("###.###.###-##");
+            mask.setValueContainsLiteralCharacters(false);
+            return mask.valueToString(cnpj);
+        } catch (ParseException ex) {
+            System.out.println(ex);
+            return "";
+        }
+    }
+
+    public static String formatarCEP(String cep) {
+        try {
+            MaskFormatter mask = new MaskFormatter("##.###-###");
+            mask.setValueContainsLiteralCharacters(false);
+            return mask.valueToString(cep);
+        } catch (ParseException ex) {
+            System.out.println(ex);
+            return "";
+        }
     }
 }

@@ -36,7 +36,7 @@ public class AguaLuzAtracaoApp {
         cadastro.setNotificacaoTipo(NotificacaoTipo.SMS);
 
         Pessoa pessoa = new Pessoa();
-        pessoa.setCpf("56737284094");
+        pessoa.setCpf("238.402.650-02");
         pessoa.setNome("Gleyson Sampaio de Oliveira");
         pessoa.setRg("898797");
         pessoa.setCelular("98965498760");
@@ -44,7 +44,7 @@ public class AguaLuzAtracaoApp {
 
         Endereco endereco = new Endereco();
         endereco.setBairro("Santo Antonio");
-        endereco.setCep("27.310-657");
+        endereco.setCep("08220-970");
         endereco.setCidade("São Paulo");
         endereco.setEstado("SP");
         endereco.setLogradouro("Rua das Marias");
@@ -67,7 +67,7 @@ public class AguaLuzAtracaoApp {
         cadastro2.setNotificacaoTipo(NotificacaoTipo.WHATS);
 
         Pessoa pessoa2 = new Pessoa();
-        pessoa2.setCpf("8787987554");
+        pessoa2.setCpf("470.220.160-38");
         pessoa2.setNome("Ray Brandão de Miranda");
         pessoa2.setRg("9878974");
         pessoa2.setCelular("98785468");
@@ -75,7 +75,7 @@ public class AguaLuzAtracaoApp {
 
         Endereco endereco2 = new Endereco();
         endereco2.setBairro("Santo Antonio");
-        endereco2.setCep("27.310-657");
+        endereco2.setCep("58076-037");
         endereco2.setCidade("São Paulo");
         endereco2.setEstado("SP");
         endereco2.setLogradouro("Rua das Marias");

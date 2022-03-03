@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.mjvschool.notificacao.model.cadastro.NotificacaoTipo;
 import com.mjvschool.notificacao.model.dto.DadosArquivoDTO;
+import com.mjvschool.notificacao.output.GeradorArquivo;
 import com.mjvschool.notificacao.repository.DadosArquivoRepository;
 import com.mjvschool.notificacao.service.ContratoService;
 import com.mjvschool.notificacao.service.TransmissorMensagem;
@@ -39,10 +40,13 @@ public class AguaLuzNotificacaoApp {
     }
 
 	private static void faseGeracaoArquivo() {
-		/*List<Contrato> contratos =  contratoRepositorio.listarTodos();
+		ContratoService contratoService = new ContratoService();
 		GeradorArquivo gerador = new GeradorArquivo();
-		gerador.gerarArquivoCsv(contratos);
-		gerador.gerarArquivoTxt(contratos);*/
-		
+
+		for(DadosArquivoDTO dados : dadosRepositorio.listarTodos()){
+			String mensagem = contratoService.gerarConteudoContrato(dados);
+
+			gerador.gerarArquivoTxt(dados.getProtocolo(), mensagem);
+		}
 	}
 }
