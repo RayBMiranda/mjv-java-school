@@ -1,8 +1,6 @@
 package com.mjvschool.notificacao.util;
 
-import java.lang.System.Logger.Level;
 import java.text.ParseException;
-import java.util.logging.Logger;
 
 import javax.swing.text.MaskFormatter;
 
