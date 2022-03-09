@@ -1,6 +1,10 @@
 package com.mjvschool.atracao.util;
 
 public class TextoUtil {
+    public static String preencher(String textoOriginal, int tamanhoMaximo){
+        return preencher(textoOriginal, tamanhoMaximo, false);
+    }
+
 	public static String preencher(String textoOriginal, int tamanhoMaximo, boolean esquerda){
         String formato = "%" + (esquerda == true ? "" : "-") + String.valueOf(tamanhoMaximo).concat("s");
         String novaString = String.format(formato, textoOriginal);
@@ -15,9 +19,9 @@ public class TextoUtil {
     public static String ajustar(String textoOriginal, int tamanhoMaximo){
         String novaString = "";
         if (textoOriginal == null)
-            novaString = preencher("", tamanhoMaximo, false);
+            novaString = preencher("", tamanhoMaximo);
         else
-            novaString = preencher(textoOriginal, tamanhoMaximo, false);
+            novaString = preencher(textoOriginal, tamanhoMaximo);
         novaString = limitar(novaString, tamanhoMaximo);
         return novaString;
     }
