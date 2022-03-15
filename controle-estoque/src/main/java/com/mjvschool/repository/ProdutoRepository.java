@@ -32,12 +32,6 @@ public class ProdutoRepository {
         return query.getResultList();
     }
 
-    public List<Produto> findAllAtivos(Boolean ativo){
-        Query query = em.createQuery("Select p From Produto p Where a.ativo = :p1");
-        query.setParameter(":p1", ativo);
-        return query.getResultList();
-    }
-
     public List<Produto> findProdutosSemEstoque() {
         Query query = em.createQuery("Select p From Produto p where p.estoque <= 0");
         return query.getResultList();
