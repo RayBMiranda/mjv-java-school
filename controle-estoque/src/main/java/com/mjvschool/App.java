@@ -6,12 +6,7 @@ import java.util.List;
 import com.mjvschool.model.Produto;
 import com.mjvschool.model.TipoUnidade;
 import com.mjvschool.repository.ProdutoRepository;
-import com.mjvschool.util.NumberUtil;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )

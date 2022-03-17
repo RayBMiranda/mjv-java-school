@@ -2,7 +2,6 @@ package com.mjvschool.model;
 
 import java.math.BigDecimal;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -20,16 +19,26 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    
+    @Column(length = 13)
     private String ean;
+    
+    @Column(length = 60)
     private String descricao;
-    @Column(scale = 2, precision = 10)
-    private BigDecimal estoque;
+    
     @Column(scale = 2, precision = 10)
     private BigDecimal precoVenda;
+
     @Column(scale = 2, precision = 10)
     private BigDecimal precoCusto;
+    
     @Enumerated(EnumType.STRING)
     private TipoUnidade tipoUnidade;
+
+    private Categoria categoria;
+
+    @Column(scale = 2, precision = 10)
+    private BigDecimal estoque;
 
     public Integer getId() {
         return id;
@@ -49,12 +58,7 @@ public class Produto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public BigDecimal getEstoque() {
-        return estoque;
-    }
-    public void setEstoque(BigDecimal estoque) {
-        this.estoque = estoque;
-    }
+    
     public BigDecimal getPrecoVenda() {
         return precoVenda;
     }
@@ -72,6 +76,22 @@ public class Produto {
     }
     public void setTipoUnidade(TipoUnidade tipoUnidade) {
         this.tipoUnidade = tipoUnidade;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public BigDecimal getEstoques() {
+        return estoque;
+    }
+
+    public void setEstoque(BigDecimal estoque) {
+        this.estoque = estoque;
     }
 
     @Override
